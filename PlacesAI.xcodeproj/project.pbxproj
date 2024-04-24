@@ -14,6 +14,7 @@
 		52D0528E2BD8B37800337715 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 52D0528D2BD8B37800337715 /* GoogleGenerativeAI */; };
 		52D052912BD8B3DD00337715 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052902BD8B3DD00337715 /* Constant.swift */; };
 		52D052932BD8B53A00337715 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052922BD8B53A00337715 /* Place.swift */; };
+		52D052962BD8B77A00337715 /* PlaceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052952BD8B77A00337715 /* PlaceVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		52D0527F2BD8B20100337715 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52D052902BD8B3DD00337715 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		52D052922BD8B53A00337715 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		52D052952BD8B77A00337715 /* PlaceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		52D052772BD8B20000337715 /* PlacesAI */ = {
 			isa = PBXGroup;
 			children = (
+				52D052942BD8B77100337715 /* ViewModel */,
 				52D0528F2BD8B3BD00337715 /* Model */,
 				52D052862BD8B20900337715 /* App */,
 				52D052872BD8B20E00337715 /* View */,
@@ -105,6 +108,14 @@
 				52D052922BD8B53A00337715 /* Place.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		52D052942BD8B77100337715 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52D052952BD8B77A00337715 /* PlaceVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 				52D0527B2BD8B20000337715 /* ContentView.swift in Sources */,
 				52D052792BD8B20000337715 /* PlacesAIApp.swift in Sources */,
 				52D052912BD8B3DD00337715 /* Constant.swift in Sources */,
+				52D052962BD8B77A00337715 /* PlaceVM.swift in Sources */,
 				52D052932BD8B53A00337715 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
