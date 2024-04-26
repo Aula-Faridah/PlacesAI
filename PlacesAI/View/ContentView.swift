@@ -21,9 +21,16 @@ struct ContentView: View {
             .overlay {
                 placeVM.place.isEmpty ? ProgressView() : nil
             }
-            .task {
-                await placeVM.getPlaces()
-            }
+            .onChange(of: placeVM.isReady, { oldValue, newValue in
+                if newValue {
+                    Task{
+                        await placeVM.getPlaces()
+                    }
+                }
+            })
+//            .task {
+//                await placeVM.getPlaces()
+//            }
             .refreshable {
                 await placeVM.getPlaces()
             }
