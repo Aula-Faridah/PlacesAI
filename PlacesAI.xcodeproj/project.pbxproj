@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		527476652BDB5EDB00D9D071 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 527476642BDB5EDB00D9D071 /* FirebaseRemoteConfig */; };
+		527476672BDB5EDB00D9D071 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 527476662BDB5EDB00D9D071 /* FirebaseRemoteConfigSwift */; };
+		5274766B2BDB609C00D9D071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5274766A2BDB609C00D9D071 /* GoogleService-Info.plist */; };
+		5274766E2BDB616500D9D071 /* RemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274766D2BDB616500D9D071 /* RemoteConfigService.swift */; };
 		52D052792BD8B20000337715 /* PlacesAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052782BD8B20000337715 /* PlacesAIApp.swift */; };
 		52D0527B2BD8B20000337715 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D0527A2BD8B20000337715 /* ContentView.swift */; };
 		52D0527D2BD8B20100337715 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52D0527C2BD8B20100337715 /* Assets.xcassets */; };
@@ -15,9 +19,12 @@
 		52D052912BD8B3DD00337715 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052902BD8B3DD00337715 /* Constant.swift */; };
 		52D052932BD8B53A00337715 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052922BD8B53A00337715 /* Place.swift */; };
 		52D052962BD8B77A00337715 /* PlaceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052952BD8B77A00337715 /* PlaceVM.swift */; };
+		52D052982BD8BA7400337715 /* PlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D052972BD8BA7400337715 /* PlaceRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5274766A2BDB609C00D9D071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5274766D2BDB616500D9D071 /* RemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigService.swift; sourceTree = "<group>"; };
 		52D052752BD8B20000337715 /* PlacesAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52D052782BD8B20000337715 /* PlacesAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAIApp.swift; sourceTree = "<group>"; };
 		52D0527A2BD8B20000337715 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +33,7 @@
 		52D052902BD8B3DD00337715 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		52D052922BD8B53A00337715 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		52D052952BD8B77A00337715 /* PlaceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVM.swift; sourceTree = "<group>"; };
+		52D052972BD8BA7400337715 /* PlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527476672BDB5EDB00D9D071 /* FirebaseRemoteConfigSwift in Frameworks */,
+				527476652BDB5EDB00D9D071 /* FirebaseRemoteConfig in Frameworks */,
 				52D0528E2BD8B37800337715 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,11 +50,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		527476632BDB5EDB00D9D071 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5274766C2BDB615200D9D071 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				5274766D2BDB616500D9D071 /* RemoteConfigService.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		52D0526C2BD8B20000337715 = {
 			isa = PBXGroup;
 			children = (
 				52D052772BD8B20000337715 /* PlacesAI */,
 				52D052762BD8B20000337715 /* Products */,
+				527476632BDB5EDB00D9D071 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +85,8 @@
 		52D052772BD8B20000337715 /* PlacesAI */ = {
 			isa = PBXGroup;
 			children = (
+				5274766C2BDB615200D9D071 /* Config */,
+				5274766A2BDB609C00D9D071 /* GoogleService-Info.plist */,
 				52D052942BD8B77100337715 /* ViewModel */,
 				52D0528F2BD8B3BD00337715 /* Model */,
 				52D052862BD8B20900337715 /* App */,
@@ -89,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				52D0527A2BD8B20000337715 /* ContentView.swift */,
+				52D052972BD8BA7400337715 /* PlaceRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +165,8 @@
 			name = PlacesAI;
 			packageProductDependencies = (
 				52D0528D2BD8B37800337715 /* GoogleGenerativeAI */,
+				527476642BDB5EDB00D9D071 /* FirebaseRemoteConfig */,
+				527476662BDB5EDB00D9D071 /* FirebaseRemoteConfigSwift */,
 			);
 			productName = PlacesAI;
 			productReference = 52D052752BD8B20000337715 /* PlacesAI.app */;
@@ -167,6 +198,7 @@
 			mainGroup = 52D0526C2BD8B20000337715;
 			packageReferences = (
 				52D0528C2BD8B37800337715 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				527476582BDB5E3200D9D071 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 52D052762BD8B20000337715 /* Products */;
 			projectDirPath = "";
@@ -184,6 +216,7 @@
 			files = (
 				52D052802BD8B20100337715 /* Preview Assets.xcassets in Resources */,
 				52D0527D2BD8B20100337715 /* Assets.xcassets in Resources */,
+				5274766B2BDB609C00D9D071 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,9 +229,11 @@
 			files = (
 				52D0527B2BD8B20000337715 /* ContentView.swift in Sources */,
 				52D052792BD8B20000337715 /* PlacesAIApp.swift in Sources */,
+				52D052982BD8BA7400337715 /* PlaceRow.swift in Sources */,
 				52D052912BD8B3DD00337715 /* Constant.swift in Sources */,
 				52D052962BD8B77A00337715 /* PlaceVM.swift in Sources */,
 				52D052932BD8B53A00337715 /* Place.swift in Sources */,
+				5274766E2BDB616500D9D071 /* RemoteConfigService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +439,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		527476582BDB5E3200D9D071 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
 		52D0528C2BD8B37800337715 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google-gemini/generative-ai-swift.git";
@@ -415,6 +458,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		527476642BDB5EDB00D9D071 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 527476582BDB5E3200D9D071 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		527476662BDB5EDB00D9D071 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 527476582BDB5E3200D9D071 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
 		52D0528D2BD8B37800337715 /* GoogleGenerativeAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 52D0528C2BD8B37800337715 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;

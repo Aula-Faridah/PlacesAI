@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Place: Codable {
+struct Place: Codable, Hashable {
     var place, activity, price: String
 }
 
 extension Place {
     static let dummyData: [Place] = [
         Place(
-            place: "Baso Das", 
+            place: "Baso Damas", 
             activity: "Eat meat ball",
             price: "35.000"
         )

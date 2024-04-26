@@ -16,7 +16,7 @@ class PlaceVM: ObservableObject {
         self.geminiModel = GenerativeModel(name: "gemini-pro", apiKey: Constant.apiKey)
     }
     
-    func getPlasces() async {
+    func getPlaces() async {
         let prompt = Constant.prompt
         
         do {
